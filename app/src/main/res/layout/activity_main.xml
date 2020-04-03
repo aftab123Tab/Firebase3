@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/R">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:id="@+id/emailET"
+        android:layout_marginLeft="20dp"
+        android:hint="Enter Email"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:maxLength="25"
+        android:nextFocusDown="@id/passwordET"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/passwordET"
+        android:layout_below="@id/emailET"
+        android:hint="Enter password"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:maxLength="10"
+        android:nextFocusDown="@id/signUpBtn"/>
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="80dp"
+    android:id="@+id/l"
+    android:layout_below="@id/passwordET"
+    android:layout_centerInParent="true"
+    >
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/signUpBtn"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/passwordET"
+        android:layout_centerInParent="true"
+        android:text="SigUp"
+        android:textStyle="bold"
+        />
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/signInBtn"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/signUpBtn"
+        android:layout_centerInParent="true"
+        android:text="SignIn"
+        android:textStyle="bold"
+        />
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/l2"
+        android:layout_below="@id/l"
+        android:layout_centerInParent="true"
+        >
+    <Button
+        android:textStyle="bold"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/signGoogle"
+        android:layout_marginLeft="20dp"
+        android:drawableStart="@drawable/google_logo"
+        android:drawableLeft="@drawable/google_logo"
+        android:layout_below="@id/signInBtn"
+        android:layout_centerInParent="true"
+        android:text="SignIn"
+
+        />
+    <Button
+        android:textStyle="bold"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/sigOutGoogle"
+        android:drawableStart="@drawable/google_logo"
+        android:drawableLeft="@drawable/google_logo"
+        android:layout_below="@id/signGoogle"
+        android:layout_centerInParent="true"
+        android:text="SignOut"
+        android:layout_marginLeft="20dp"
+
+        />
+    </LinearLayout>
+    <com.facebook.login.widget.LoginButton
+
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_below="@id/idTV"
+        android:layout_centerInParent="true"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameTV"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/l2"
+        android:layout_marginLeft="100dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/useremailTV"
+        android:layout_below="@id/nameTV"
+        android:layout_marginLeft="100dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/idTV"
+        android:textSize="45sp"
+        android:layout_below="@id/useremailTV"
+        android:layout_marginLeft="100dp"
+        />
+
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/signUpProgressBar"
+
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible"
+        />
+
+
+</RelativeLayout>
